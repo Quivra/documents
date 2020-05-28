@@ -19,6 +19,8 @@ A Url pode ser configurada no seu painel de controle em Ferramentas / Post Back 
 	"statusName": "Iniciado",
 	"paymentType" : "1",
 	"paymentTypeName": "Cartao de Credito",
+	createdAt: "AAAA-MM-DD HH:mm:ss",
+	updatedAt: "AAAA-MM-DD H:mm:ss",
 	"customer": {
 		"customerName": "NOME DO CONSUMIDOR",
 		"customerDocument": "NUMERO DO CPF",
