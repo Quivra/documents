@@ -6,11 +6,12 @@ A notificação de pagamento instantâneo (IPN) é um método para os varejistas
 Isso permite que os sistemas de comércio eletrônico tenham a oportunidade de armazenar transações de pagamento, informações sobre pedidos e outras vendas internamente.
 As mensagens IPN podem representar êxito ou falhas no pagamento, alterações no status da transação do pedido, informações do razão contábil e muitas outras.
 
-A Url pode ser configurada no seu painel de controle em Ferramentas / Post Back (IPN), você pode enviar o IPN para qualquer status de transação e forma de pagamento
+A Url pode ser configurada no seu painel de controle em Ferramentas / Post Back (IPN), você pode enviar o IPN para qualquer status de transaação e forma de pagamento
 
 
 ```json
 {
+	"personType": 1,  // 1 - VENDEDOR/PRODUTOR 2 - AFILIADO
 	"checkoutUuid":"IDENTIFICADOR UNICO DA QUIVRA",
 	"totalCheckout": "1.00",
 	"totalProducts" : "1.00",
@@ -19,8 +20,8 @@ A Url pode ser configurada no seu painel de controle em Ferramentas / Post Back 
 	"statusName": "Iniciado",
 	"paymentType" : "1",
 	"paymentTypeName": "Cartao de Credito",
-	createdAt: "AAAA-MM-DD HH:mm:ss",
-	updatedAt: "AAAA-MM-DD H:mm:ss",
+	"createdAt": "AAAA-MM-DD HH:mm:ss",  // DATA DE CRIAÇÃO DO CHECKOUT
+	"updatedAt": "AAAA-MM-DD H:mm:ss", // DATA DA ULTIMA ATUALIZACAO (QUANDO PAGAMENTO ESSA É A DATA DE PAGAMENTO)
 	"customer": {
 		"customerName": "NOME DO CONSUMIDOR",
 		"customerDocument": "NUMERO DO CPF",
